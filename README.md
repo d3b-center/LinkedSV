@@ -3,7 +3,8 @@ This is d3b CWL implementation of https://github.com/WGLab/LinkedSV. It follows 
 
 ## Tools
 
-### Linked SV 
+### Linked SV
+Note only `output_basename`, `bam`, `ref` and `detect_mode` are required.
 Location `./tools/linked_sv.cwl`
 #### inputs:
 ```yaml
@@ -30,8 +31,6 @@ Location `./tools/linked_sv.cwl`
       glob: '*.tar.gz'
 ```
 
-Note only `output_basename`, `bam`, `ref` and `detect_mode` are required.
-
 ### Untar bam
 Location: ./tools/ubuntu_untar_bam.cwl
 Utility to extract the bam file from longranger output
@@ -51,7 +50,8 @@ Utility to extract the bam file from longranger output
 
 ## Workflow
 ### Linked SV Workflow
-Location: ./workflows/linkd_sv_wf.cwl
+Note only `output_basename`, `tar_gz`, `ref` and `detect_mode` are required.
+Location: ./workflows/linked_sv_wf.cwl
 This workflow ties together Untar bam utility with the linked sv tool.
 #### inputs:
 ```yaml
